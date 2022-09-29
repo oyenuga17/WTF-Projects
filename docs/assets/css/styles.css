@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+
+* {
+    margin: 0;
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body,
+.page {
+    height: 100vh;
+    background-color: var(--primary-color);
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+:root {
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+
+.sign_up_page {
+    text-align: center;
+    height: 30vh;
+    padding-top: 70px;
+    font-weight: 700;
+    color: white;
+}
+
+.sign_up_page h1{
+   font-size: 2.5rem;
+   padding-bottom: 30px;
+}
+.sign_up_page h2{
+    font-size: 1.5rem;
+}
+
+
+.showcase {
+    height: 70vh;
+    padding: 0 200px 0 200px;
+    position: relative;
+}
+
+.showcase::before,
+.showcase::after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background:var(--light-color);
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height:100%
+}
+
+.showcase-text{
+   color: #fff;
+   animation: slideInFromLeft 1s ease-in;
+
+}
+.showcase-text h1 {
+   padding-bottom: 30px;
+   font-size: 2.3rem;
+}
+ .showcase-text button{
+    padding: 15px 50px;
+    border-radius: 15px;
+    cursor: pointer;
+ }
+ .showcase-text p{
+    padding-bottom: 30px;
+    font-size: 1rem ;
+ }
+
+.showcase_form_card {
+    height: 350px;
+    width: 300px;
+    position: relative;
+    top: 60px;
+    z-index: 100;
+   animation: slideInFromRight 1s ease-in;
+
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 10px;
+}
+
+.form-control{
+    margin: 20px 0;
+}
+
+.form-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+
+form input[type='text'],
+form input[type='email'],
+form input[type='password']
+ {
+  border:  1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width:768px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+  
+    .showcase{
+        padding-top: 50px;
+    }
+    .showcase-text{
+       text-align:center;
+    }
+
+     .showcase-text h1{
+     padding-top: 35px;
+    }
+    .showcase-text p{
+        padding-bottom: 10px;
+    }
+    
+
+}
